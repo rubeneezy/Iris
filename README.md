@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+# Iris: A Vehicle Safety Monitoring System
 
-You can use the [editor on GitHub](https://github.com/rubeneezy/Iris/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+## Project Description
+According to the CDC, 1.35 million people are killed on roadways around the world each year. Many of these accidents are caused by drunk driving, drowsiness, distracted driving, and many others by preventable mistakes such as wearing a seatbelt. Autonomous vehicles have the potential to reduce the number of driving accidents yet seatbelt wear and other safety precautions need to remain in place. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In order to enforce these precautions, autonomous vehicles will need to understand the in-cabin environment. I propose to build Iris, a computer vision system that uses Neural Networks to monitor behavior passenger to minimize the probability of injury in case of an accident.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rubeneezy/Iris/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Project Goals
+1. Detect if all passengers are wearing seatbelts.
+2. Detect safety driver gaze (to prevent distractions).
+3. Detect extraordinary safety driver conditions such as drowsiness/sleepiness.
