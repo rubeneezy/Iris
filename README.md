@@ -1,6 +1,5 @@
 # Iris: A Vehicle Safety Monitoring System
 
-![alt text](https://github.com/rubeneezy/iris/blob/master/download.jpeg?raw=true)
 
 ## Project Description
 According to the CDC, 1.35 million people are killed on roadways around the world each year. Many of these accidents are caused by drunk driving, drowsiness, distracted driving, and many others by preventable mistakes such as wearing a seatbelt.
