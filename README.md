@@ -1,7 +1,6 @@
 # Iris: A Vehicle Safety Monitoring System
 ![Image of Distracted Driver](https://github.com/rubeneezy/Iris/blob/main/Figure2_5-1024x629.jpg)
 
-![Image of Segmented Seatbelt](https://github.com/rubeneezy/Iris/blob/main/download.jpeg)
 
 
 
@@ -10,6 +9,9 @@
 According to the CDC, 1.35 million people are killed on roadways around the world each year. Many of these accidents are caused by drunk driving, drowsiness, distracted driving, and many others by preventable mistakes such as wearing a seatbelt.
 
 I propose to build Iris, a computer vision system that uses Neural Networks to monitor passenger and driver behavior to minimize the probability of accidents or injury. Iris will warn passengers if it spots any safety concerns such as a) not wearing a seatbelt b) driver is distracted (gazing away) c) driver is drowsy. A neural network will be trained for each one of these warnings and all will be deployed in new environments to run in parallel to create the full Iris system. Iris will be ran on an Nvidia Jetson Nano to provide portable convinience and will eventually be tested live.
+
+![Image of Segmented Seatbelt](https://github.com/rubeneezy/Iris/blob/main/download.jpeg)
+
 
 The dataset for seatbelt detection may need to be created (there exists one on imagenet but not sure how to access it). However, many datasets exist for driver gaze and drowsiness detection. Although Iris may be ambitious given the limited timeline, it is nonetheless possible with enough people working on it. The Minimum Viable Product of Iris is at least one safety detection feature implemented.
 
