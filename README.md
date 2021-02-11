@@ -13,7 +13,7 @@ I propose to build Iris, a computer vision system that uses Neural Networks to m
 ![Image of Segmented Seatbelt](https://github.com/rubeneezy/Iris/blob/main/download.jpeg)
 
 
-The dataset for seatbelt detection may need to be created (there exists one on imagenet but not sure how to access it). However, many datasets exist for driver gaze and drowsiness detection. Although Iris may be ambitious given the limited timeline, it is nonetheless possible with enough people working on it. The Minimum Viable Product of Iris is at least one safety detection feature implemented.
+The dataset for seatbelt detection can be created by using existing datasets (such as distracted driver dataset). However, many datasets exist for driver gaze and drowsiness detection. Although Iris may be ambitious given the limited timeline, it is nonetheless possible with enough people working on it. The Minimum Viable Product of Iris is at least one safety detection feature implemented.
 
 ### The Potential of Autonomy
 Autonomous vehicles have the potential to reduce the number of driving accidents yet seatbelt wear and other safety precautions need to remain in place. In addition, many of the current advanced driver systems such as Tesla require a safety driver, thus additional safety monitoring is needed. Iris has significance and plays a part in the advancement of autonomous vehicles.
