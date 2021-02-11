@@ -1,6 +1,9 @@
 # Iris: A Vehicle Safety Monitoring System
+![Image of Distracted Driver](https://github.com/rubeneezy/Iris/blob/main/Figure2_5-1024x629.jpg)
 
 ![Image of Segmented Seatbelt](https://github.com/rubeneezy/Iris/blob/main/download.jpeg)
+
+
 
 
 ## Project Description
