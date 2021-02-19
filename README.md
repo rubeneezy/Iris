@@ -1,24 +1,24 @@
 # Iris: A Vehicle Safety Monitoring System
+## Adam Lininger-White, Kevin Ayala, Ruben Pacheco-Caldera
+
 ![Image of Distracted Driver](https://github.com/rubeneezy/Iris/blob/main/Figure2_5-1024x629.jpg)
 
 
 
+According to the CDC, 1.35 million people are killed on roadways around the world each year, caused by drunk driving, drowsiness, distracted driving, and or preventable mistakes such as not wearing a seatbelt. 
 
+Seat Belt detection systems in cars can’t actually tell if someone is wearing theirs correctly, since they only detect whether it has been “clicked in''. Similarly, other measures such as the “hands on the wheel” heuristic attempt to provide a proxy for the information but may not solve the issue itself. 
 
-## Project Description
-According to the CDC, 1.35 million people are killed on roadways around the world each year. Many of these accidents are caused by drunk driving, drowsiness, distracted driving, and many others by preventable mistakes such as wearing a seatbelt.
+By using computer vision to directly classify whether a person is actually wearing their seatbelt properly, or whether they are focusing on the road, we can provide much more useful data to insurance companies in the event of an at-fault scenario, and hopefully prevent these scenarios entirely with our application. 
 
-I propose to build Iris, a computer vision system that uses Neural Networks to monitor passenger and driver behavior to minimize the probability of accidents or injury. Iris will warn passengers if it spots any safety concerns such as a) not wearing a seatbelt b) driver is distracted (gazing away) c) driver is drowsy. A neural network will be trained for each one of these warnings and all will be deployed in new environments to run in parallel to create the full Iris system. Iris will be ran on an Nvidia Jetson Nano to provide portable convinience and will eventually be tested live.
+In order to implement this system, we’ll have to find or generate an acceptable bank of images to use for classification. This may be a challenge, since we don’t think the specific application we are trying to build has been done. 
+
+If we can get an 70% accuracy rating, we think that would make our project feasible, given the size of our data bank. Deployment of our system would happen as a web app where you can upload pictures and receive a response, but a reach goal would be to implement this as a part of the car’s system. 
+
 
 ![Image of Segmented Seatbelt](https://github.com/rubeneezy/Iris/blob/main/download.jpeg)
 
 
-The dataset for seatbelt detection can be created by using existing datasets (such as distracted driver dataset). However, many datasets exist for driver gaze and drowsiness detection. Although Iris may be ambitious given the limited timeline, it is nonetheless possible with enough people working on it. The Minimum Viable Product of Iris is at least one safety detection feature implemented.
-
-### The Potential of Autonomy
-Autonomous vehicles have the potential to reduce the number of driving accidents yet seatbelt wear and other safety precautions need to remain in place. In addition, many of the current advanced driver systems such as Tesla require a safety driver, thus additional safety monitoring is needed. Iris has significance and plays a part in the advancement of autonomous vehicles.
-
 ## Project Goals
 1. Detect if all passengers are wearing seatbelts.
-2. Detect safety driver gaze (to prevent distractions).
-3. Detect extraordinary safety driver conditions such as drowsiness/sleepiness.
+2. Detect drowsy drivers
