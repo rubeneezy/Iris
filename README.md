@@ -23,6 +23,7 @@ If we can get an 70% accuracy rating, we think that would make our project feasi
 1. Detect if all passengers are wearing seatbelts.
 2. Detect drowsy drivers
 
+## Literature Review
 
 Kashevnik, A., Lashkov, I., Shilov, N., Ali, A., & 26th Conference of Open Innovations Association FRUCT, FRUCT 2020 26 2020 04 23 - 2020 04 24. (2020). Seat belt fastness detection based on image analysis from vehicle in-abin camera. Conference of Open Innovation Association, Fruct, 2020-april, 143–150. https://doi.org/10.23919/FRUCT48808.2020.9087474
 
