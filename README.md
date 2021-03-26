@@ -15,6 +15,12 @@ There is significant existing research around monitoring driver attentiveness. M
 
 The systems mentioned above were both simple to implement and remarkably successful in detecting driver focus and the presence of distracting objects. A logical next step, which seems feasible after surveying existing research, would involve piecing these safety measures together to create a more comprehensive driver safety/attentiveness system. 
 
+## Implementation
+
+We have gathered an initial set of about 200 images for training our seatbelt classifier. We have also started implementing simple versions of this classifier.
+
+Although we have not yet gathered all of the images we plan to gather, we are unsure if 500 total images will suffice to train a good classifier. Again, there is no existing seatbelt dataset, so we have to stitch one up using existing datasets and our own data.
+
 
 Chen, Yanxiang, et al. “Accurate Seat Belt Detection in Road Surveillance Images Based on Cnn and Svm.” Neurocomputing, vol. 274, 2018, pp. 80–87., doi:10.1016/j.neucom.2016.06.098.
 
