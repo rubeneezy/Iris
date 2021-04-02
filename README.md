@@ -29,3 +29,24 @@ F. Vicente, Z. Huang, X. Xiong, F. De la Torre, W. Zhang and D. Levi, "Driver Ga
 Kashevnik, A., Lashkov, I., Shilov, N., Ali, A., & 26th Conference of Open Innovations Association FRUCT, FRUCT 2020 26 2020 04 23 - 2020 04 24. (2020). Seat belt fastness detection based on image analysis from vehicle in-cabin camera. Conference of Open Innovation Association, Fruct, 2020-april, 143–150. https://doi.org/10.23919/FRUCT48808.2020.9087474
 
 Vural E., Cetin M., Ercil A., Littlewort G., Bartlett M., Movellan J. (2007) Drowsy Driver Detection Through Facial Movement Analysis. In: Lew M., Sebe N., Huang T.S., Bakker E.M. (eds) Human–Computer Interaction. HCI 2007. Lecture Notes in Computer Science, vol 4796. Springer, Berlin, Heidelberg. https://doi-org.ccl.idm.oclc.org/10.1007/978-3-540-75773-3_2
+
+## Methods
+
+### Development Setup
+- We will be using Pomona's HPC servers to train our neural networks.
+
+### Software
+- To train and run our model, we are considering using fastai and pytorch because we are already familiar with these, but we will also investigate and experiment with using some of the software and NN architectures in the papers.
+- We are using a CNN.
+- We will experiment using transfer learning using existing pre-trained models such as AlexNet.
+- If we get to implement this tool in real-time seatbelt detection, we have to optimize the speed of our application.
+- We plan to investigate different deployment options for a web application version of this application.
+
+### Data Collection
+- We are taking a hybrid approach between using existing images and supplementing with our own.
+- We are taking pictures of ourselves, family, and friends, and varying the conditions of the images.
+- We plan to experiment with image preprocessing methods such as greyscaling, mirroring images, and other methods.
+- We are all physically similar, and thus our data collection will be biased, even with varying conditions.
+- This model may work only for college-aged, light-skinned people.
+
+
