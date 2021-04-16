@@ -8,6 +8,27 @@ According to the CDC, 1.35 million people are killed on roadways around the worl
 
 In order to implement this system, we’ll have to find or generate an acceptable bank of images to use for classification. This may be a challenge, since we don’t think the specific application we are trying to build has been done. If we can get an 70% accuracy rating, we think that would make our project feasible, given the size of our data bank. Deployment of our system would happen as a web app where you can upload pictures and receive a response, but a reach goal would be to implement this as a part of the car’s system.
 
+Discussion
+Our data was collected manually, by taking pictures of friends, relatives, and ourselves in different positions inside of a car. We have to acknowledge that this data set is not very large, and not very racially diverse. It therefore lacks a lot of entropy and may not be the most efficient. However, we think its enough to complete our project.
+*continue with a discussion of the methods we’ve researched to get better data, how we could do it better next time, and why the diversity is important*
+
+Others have done X [seatbelt detection using YOLO architecture, driver gaze]. Ours was unique in that it (packaged itself a little more nicely, is made available to the public, is more user friendly. We’re shooting for an application that can be used by all, but will be particularly useful for insurance claims, which means that it needs to generate some sort of report, which may include a recorded video and will certainly include a prediction of how distracted the driver was (with useful information like confidence intervals so that the human adjuster can evaluate it).
+
+*Walk through our implementation*
+Gathering of the data (friends & family in private vehicles, maybe with outfit changes)
+Training the model using RNN to label each pixel as belonging or not to the class
+Finalizing the application: probably just a txt output that can be easily attached as an email or demand letter
+
+*Concepts Learned*
+Recurrent Neural Networks
+App deployment
+
+*Potential Discussion Questions*
+Should this information be available to the driver themselves?
+Should the driver be able to delete this information? Will automatic sharing constitute self-incrimination? (if the driver was in fact distracted?)
+ How will the lack of diversity affect deployment efforts and successes? (It will definitely be harmful to share this information if it could be wrong!)
+
+
 ### Related Works
 There exists research around seatbelt detection. Since our application will run in real-time, performance is an important factor. Kashevnik et al. developed a seatbelt detection model using the YOLO neural network architecture, which provides significant performance boost and is optimized for real-time applications. Nonetheless, it is important not to sacrifice accuracy when improving performance. This model achieved a 93% accuracy, which is high enough for our use case.  Chen et al. used CNNs to detect whether seat belts were being worn, much like ours will. Most of the time, this depends on edge detection, however this paper argues that  it is not always dependable, since the type and layouts of cars differ. Their model is an amalgamation of two other models: one which exists to extract more features and one which actually trains using those new features. They argue that this is more effective. 
 
