@@ -1,7 +1,7 @@
 # Iris: A Vehicle Safety Monitoring System
 ## Adam Lininger-White, Kevin Ayala, Ruben Pacheco-Caldera
 
-![Image of Distracted Driver](https://github.com/rubeneezy/Iris/blob/main/Figure2_5-1024x629.jpg)
+![Image of Distracted Driver](https://github.com/adamliningerwhite/Iris/blob/main/website_imgs/distracted_driver.jpeg)
 
 ### Introduction 
 According to the CDC, 1.35 million people are killed on roadways around the world each year, caused by drunk driving, drowsiness, distracted driving, and or preventable mistakes such as not wearing a seatbelt. Seat Belt detection systems in cars cannot actually tell if someone is wearing theirs correctly, since they only detect whether it has been “clicked in’’. Similarly, other measures such as the “hands on the wheel” heuristic attempt to provide a proxy for the information but may not solve the issue itself. By using computer vision to directly classify whether a person is actually wearing their seatbelt properly, or whether they are focusing on the road, we can improve driver safety and provide useful information in the event of an at-fault scenario, and hopefully prevent these scenarios entirely with our application.
