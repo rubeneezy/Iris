@@ -26,10 +26,13 @@ We arrived at our “final” model by following similar steps to what we did in
 The answer turned out to be yes, mostly. On average over the three models, we got about an 80% accuracy. Here’s what that looked like for each of them.
 
 Linear
+![Linear model training and performance stats](model_screenshots/linear_results.PNG)
 
 CNN
+![Scratch CNN model training and performance stats](model_screenshots/scratch_cnn_performance.jpeg)
 
 Resnet
+![Resnet pretrained training and performance stats](model_screenshots/resnet_performance.jpeg)
 
 Most of our time was spent on the convolutional model, since we felt that it had a higher chance of being successful We thought this because a large part of the question we were asking had to do with having certain pixels in certain areas, and from our discussion of CNN’s in class, it seemed simple enough to try to find diagonal lines. It did end up relatively successful, although not before causing some headaches.
 
