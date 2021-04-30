@@ -46,7 +46,27 @@ Pooling: we ended up actually removing the pooling layers for our CNN, since the
 
 ### State Farm Model 
 
-TODO - Adam 
+In building this model, we knew that we needed to use transfer learning to extend a CNN trained on real-world images. PyTorch supports many options trained on the ImageNet dataset, which contains millions of these inputs. We tried VGG, AlexNet, and ResNet and found that an 18-layer version of ResNet consistently had the best performance on our validation set -- though the margin was slim and any choice would’ve delivered similar results. Similarly, we tried several optimizers supported by Pytorch, including AdaGrad, Adam, SGD, and RMSProp, and found that Adam delivered the best validation accuracy. We decided to use the Binary Cross Entropy Loss function because it’s so familiar from our in-class work. 
+
+For the remaining hyperparameters in our model (epochs, batch size, image size, dropout rate), we used the strategy employed during lecture of adjusting up or down by powers of two and then tweaking to find the optimal values. In the end, we trained our model for 10 epochs with a batch size of 64, 224 x 224 images, and a 0.4 dropout rate in the second to last layer. 
+
+During training, both measures of loss (training and validation) consistently and steadily declined for all epochs. The opposite is true for our accuracy measures, which monotonically increased (graphs below). We tried increasing the number of training epochs past 10 but found that performance usually plateaued around there. Wary of overfitting, we stuck to this number.
+
+![State farm training statistics](https://github.com/rubeneezy/Iris/blob/main/model_screenshots/training_stats.png)
+
+
+We were pleasantly surprised by the final model’s performance, which achieved 86% accuracy on the whole validation set of 4485 images. Looking at a breakdown of accuracy for each class, we see that most values are close to this global mean, with a few notable exceptions. If someone is distracted and putting on makeup, our model predicts the correct label only 68% of the time. On the other hand, our model will correctly label images of people talking on the phone with their left hand 93% of the time. 
+
+![Class by class model accuracy](https://github.com/rubeneezy/Iris/blob/main/model_screenshots/class_accuracy.png)
+
+It’s difficult to guess why our model is better at knowing that someone is talking on the phone with their left hand vs. their right, especially since the camera captures images from the drivers right profile. Our model is also relatively weaker at guessing when someone is drinking, which is surprising given the uniqueness of this motion and how it looks in photos. Let’s visualize some of the model’s predictions to see if we can glean any insights. 
+
+![Visualize model predictions](https://github.com/rubeneezy/Iris/blob/main/model_screenshots/visual_output.png)
+
+Hmm, maybe a confusion matrix is more suited to the task. The plot below includes data from the whole validation set and shows the number of times our model predicted class X and the true label was class Y. Looking at this plot gives us an idea of where our model has the most room to improve.  For the model’s worst class, fixing hair and makeup, the misclassifications were spread fairly evenly across the other image classes -- a potential solution might be to simply add more “hair and makeup” images to the training set. It’s also possible, however, that this class will remain a weak point for the model, given how similar this task looks to talking on the phone (either side) and drinking.  Comparing classes in a pairwise manner, we see that our model had the hardest time differentiating pictures of people driving safely and talking to the passenger. It incorrectly guessed that a safe driver was talking to a passenger 22 times, and predicted that someone distracted by their passenger was safely driving 32 times. Naturally, we could improve the model’s performance by specifically training it to distinguish between these two classes.
+
+![Confusion matrix](https://github.com/rubeneezy/Iris/blob/main/model_screenshots/confusion_matrix.png)
+
 ## Model Comparison
 
 The State Farm Distracted Driver classification problem is slightly different because we are performing multi-class classification, and have access to a dataset that is fairly good quality. On the other hand, the seat belt classification problem is a binary classification problem for which we had to create our own dataset. At the core, we are performing image classification in both problems, so we use CNNs for both, changing the architecture as needed. Nevertheless, the different datasets required different architectures. For example, the resnet-18 model achieved an accuracy above 90% for the State Farm problem, while it only achieved 83% accuracy in the seat belt problem. A simpler, built from scratch CNN performed better in the seat belt problem. 
