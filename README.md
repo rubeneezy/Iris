@@ -3,7 +3,7 @@
 
 ![Image of Distracted Driver](https://github.com/adamliningerwhite/Iris/blob/main/website_imgs/distracted_driver.jpeg)
 
-##Introduction
+## Introduction
 
 According to the CDC, 1.35 million people are killed on roadways around the world each year, caused by drunk driving, drowsiness, distracted driving, and or preventable mistakes such as not wearing a seatbelt. Seat Belt detection systems in cars cannot actually tell if someone is wearing theirs correctly, since they only detect whether it has been “clicked in’’. Similarly, other measures such as the “hands on the wheel” heuristic attempt to provide a proxy for the information but may not solve the issue itself. By using computer vision to directly classify whether a person is actually wearing their seatbelt properly, or whether they are focusing on the road, we can improve driver safety and provide useful information in the event of an at-fault scenario, and hopefully prevent these scenarios entirely with our application.
 
@@ -16,10 +16,10 @@ There is significant existing research around monitoring driver attentiveness. M
 
 The systems mentioned above were both simple to implement and remarkably successful in detecting driver focus and the presence of distracting objects. A logical next step, which seems feasible after surveying existing research, would involve piecing these safety measures together to create a more comprehensive driver safety/attentiveness system.
 
-##Methods 
+## Methods 
 To train our models, we utilized PyTorch and its libraries. We trained our models on Pomona's High Performance Computing (HPC) servers, taking advantage of the GPUs. Based on previous research, CNNs have achieved some of the best accuracies for our use case, so that is the model we chose. In addition, we experimented with transfer learning using a pre-trained resnet-18 model. We captured our data using a cell phone camera from a center-of-dashboard angle. Furthermore, we are investigating different deployment options for a web-based application of the Iris system.
 
-##Discussion
+## Discussion
 #Seatbelt Model
 We arrived at our “final” model by following similar steps to what we did in the larger State Farm model. We tried all of: a linear neural network, a convolutional neural network, and a pre-trained resnet from pytorch. The goal was to compare these models and see how far we could get with our smaller dataset and a laser-focused question - can we detect the presence of a seatbelt in an image?
 
@@ -44,10 +44,10 @@ Pooling: we ended up actually removing the pooling layers for our CNN, since the
 
 
 
-#State Farm Model 
+# State Farm Model 
 
 TODO - Adam 
-##Model Comparison
+## Model Comparison
 
 The State Farm Distracted Driver classification problem is slightly different because we are performing multi-class classification, and have access to a dataset that is fairly good quality. On the other hand, the seat belt classification problem is a binary classification problem for which we had to create our own dataset. At the core, we are performing image classification in both problems, so we use CNNs for both, changing the architecture as needed. Nevertheless, the different datasets required different architectures. For example, the resnet-18 model achieved an accuracy above 90% for the State Farm problem, while it only achieved 83% accuracy in the seat belt problem. A simpler, built from scratch CNN performed better in the seat belt problem. 
 
@@ -55,7 +55,7 @@ The seat belt classification problem required most of our efforts to go towards 
 
 
 
-##Ethics
+## Ethics
 Our model is trained off a limited set, collected from pictures of ourselves and our friends and family. This is fine for learning, but as it stands, it shouldn’t be published. After reviewing it ourselves, we have a variety of concerns.
 Accuracy
 One of the potential applications that we imagined was sending this information to insurance companies in the case of accidents and collisions. In our view, a good model would eliminate some of the human biases of insurance adjusters looking through the data themselves. However, our data set is so small that we’re not confident it would actually reduce bias, and could have harmful outcomes. 
@@ -70,14 +70,14 @@ As mentioned above, proper implementation of our model requires a user to buy an
 
 Insurance rates would also probably increase for those whom our model has tagged as “unsafe”. If the model is wrong, we could be causing a huge financial burden incorrectly. Even worse, we could be skewing data about which groups drive unsafely, which could increase rates for an entire population. 
 
-##Reflection
+## Reflection
 
 If we had more time to work on Iris, we would invest it into curating a more diverse dataset that is representative of the general U.S. population. Although we have developed a model that detects if drivers are wearing seatbelts with fairly high accuracy, most of our sample contained White or light-complected people, which is often a problem in image classification applications. Therefore, we would see the most improvement in creating a more robust dataset. 
 In addition, there are other classification problems we would like to solve in the future, as part of Iris' goal of increasing driver safety. These classification problems include: driver gaze detection, passenger seat belt detection, and passenger activity detection, all to provide more context to the computer monitoring cabin conditions. A long-term goal is to deploy this as an in-cabin system that provides real-time analysis by running all of the Neural Networks in parallel.
 
 
 
-Works Cited 
+## Works Cited 
 
 Chen, Yanxiang, et al. “Accurate Seat Belt Detection in Road Surveillance Images Based on Cnn and Svm.” Neurocomputing, vol. 274, 2018, pp. 80–87., doi:10.1016/j.neucom.2016.06.098.
 
