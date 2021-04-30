@@ -1,7 +1,7 @@
 # Iris: A Vehicle Safety Monitoring System
 ## Adam Lininger-White, Kevin Ayala, Ruben Pacheco-Caldera
 
-![Image of Distracted Driver](https://github.com/rubeneezy/Iris/blob/main/website_imgs/distracted_driver.jpeg)
+![Image of Distracted Driver](website_imgs/distracted_driver.jpeg)
 
 ## Introduction
 
