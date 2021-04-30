@@ -9,7 +9,7 @@ According to the CDC, 1.35 million people are killed on roadways around the worl
 
 In order to implement this system, we’ll have to find or generate an acceptable bank of images to use for classification. This may be a challenge, since we don’t think the specific application we are trying to build has been done. If we can get an 70% accuracy rating, we think that would make our project feasible, given the size of our data bank. Deployment of our system would happen as a web app where you can upload pictures and receive a response, but a reach goal would be to implement this as a part of the car’s system.
 
-##Related Works
+## Related Works
 There exists research around seatbelt detection. Since our application will run in real-time, performance is an important factor. Kashevnik et al. developed a seatbelt detection model using the YOLO neural network architecture, which provides significant performance boost and is optimized for real-time applications. Nonetheless, it is important not to sacrifice accuracy when improving performance. This model achieved a 93% accuracy, which is high enough for our use case. Chen et al. used CNNs to detect whether seat belts were being worn, much like ours will. Most of the time, this depends on edge detection, however this paper argues that it is not always dependable, since the type and layouts of cars differ. Their model is an amalgamation of two other models: one which exists to extract more features and one which actually trains using those new features. They argue that this is more effective.
 
 There is significant existing research around monitoring driver attentiveness. Many applications involve mounting cameras on the steering wheel, dashboard, or front seats to capture a video stream of the driver and their surroundings. F. Vicente et al. introduces a system to monitor driver gaze and accurately detect when the driver’s eyes are on/off the road ahead. The system captures a driver’s facial features and creates a 3D rendering of their head pose and gaze direction. With this information, the system detects eyes off road (EOR) with about 95% overall accuracy, and these results are consistent for drivers of different ages, sizes, colorings, eyewear, and conditions of illumination (spectrum from sunny days to nighttime). Importantly, the system’s use of geometric reasoning removes the need for major recalibration whenever there is a new driver or the camera position changes. Vural E. et al. used 30 classifiers to detect various head and facial movements, such as yawning and blinking patterns. Unlike other research, they didn’t pre-assume anything about any of the features. So for example, they didn’t initially give any weight to blink rate, etc. They used unsupervised learning to track all of the features and have the system itself classify them drowsy. Using this method, they achieved 90% accuracy across subjects which they claim is the highest prediction rate reported to date for detecting real drowsiness.
@@ -20,7 +20,7 @@ The systems mentioned above were both simple to implement and remarkably success
 To train our models, we utilized PyTorch and its libraries. We trained our models on Pomona's High Performance Computing (HPC) servers, taking advantage of the GPUs. Based on previous research, CNNs have achieved some of the best accuracies for our use case, so that is the model we chose. In addition, we experimented with transfer learning using a pre-trained resnet-18 model. We captured our data using a cell phone camera from a center-of-dashboard angle. Furthermore, we are investigating different deployment options for a web-based application of the Iris system.
 
 ## Discussion
-#Seatbelt Model
+### Seatbelt Model
 We arrived at our “final” model by following similar steps to what we did in the larger State Farm model. We tried all of: a linear neural network, a convolutional neural network, and a pre-trained resnet from pytorch. The goal was to compare these models and see how far we could get with our smaller dataset and a laser-focused question - can we detect the presence of a seatbelt in an image?
 
 The answer turned out to be yes, mostly. On average over the three models, we got about an 80% accuracy. Here’s what that looked like for each of them.
@@ -44,7 +44,7 @@ Pooling: we ended up actually removing the pooling layers for our CNN, since the
 
 
 
-# State Farm Model 
+### State Farm Model 
 
 TODO - Adam 
 ## Model Comparison
